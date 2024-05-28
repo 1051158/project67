@@ -1,22 +1,11 @@
 # project78
-# Inhoudsopgave
-- [Project78](#project78)
-  - [Stream](#stream)
-    - [Beschrijving](#beschrijving)
-    - [Vereisten](#vereisten)
-    - [Dependencies](#dependencies)
-    - [Installatie](#installatie)
-    - [Compilatie](#compilatie)
-    - [Gebruik](#gebruik)
-    - [Functies](#functies)
-    - [Voorbeeld](#voorbeeld)
-    - [FIFO-pijpen](#fifo-pijpen)
+
 
 ## Stream
 ### Beschrijving
 Deze toepassing streamt video van een camera naar een specifieke host en poort via RTP, met de mogelijkheid om de bitrate en kleurmodus aan te passen via FIFO-pijpen.
 
-### Vereisten
+## Vereisten
 - GStreamer 1.0
 - GLib
 - g++ compiler
@@ -43,18 +32,18 @@ Start de toepassing met
 ./stream <IP_ADRES> <POORT> <BITRATE>
 ```
 waar:
-- `<IP_ADRES>` het IP-adres van de host is waarnaar gestreamd wordt.
-- `<POORT>` de poort is waarop gestreamd wordt.
-- `<BITRATE>` de initiële bitrate in kbps is.
+* <IP_ADRES> het IP-adres van de host is waarnaar gestreamd wordt.
+* <POORT> de poort is waarop gestreamd wordt.
+* <BITRATE> de initiële bitrate in kbps is.
 
 ### Functies
-- Bitrate aanpassen: De bitrate kan worden aangepast door een nieuwe waarde naar /tmp/bitrate_fifo te schrijven.
-- Kleurmodus wisselen: De kleurmodus (kleur of grijswaarden) kan worden gewisseld door color of greyscale naar /tmp/color_toggle_fifo te schrijven.
+* Bitrate aanpassen: De bitrate kan worden aangepast door een nieuwe waarde naar /tmp/bitrate_fifo te schrijven.
+* Kleurmodus wisselen: De kleurmodus (kleur of grijswaarden) kan worden gewisseld door color of greyscale naar /tmp/color_toggle_fifo te schrijven.
 
 ### Voorbeeld
-Stel, je wilt streamen naar IP-adres 192.168.1.100 op poort 5000 met een initiële bitrate van 500 kbps:
+Stel, je wilt streamen naar IP-adres 192.168.1.100 op poort 5000 met een initiële bitrate van 1500 kbps:
 ```sh
-./stream 192.168.1.100 5000 500
+./stream 192.168.1.100 5000 1500
 ```
 
 ### FIFO-pijpen
@@ -63,3 +52,30 @@ Als je het standalone gebruikt, zorg ervoor dat de FIFO-pijpen zijn gemaakt voor
 mkfifo /tmp/bitrate_fifo
 mkfifo /tmp/color_toggle_fifo
 ```
+
+
+## GUI
+### Beschrijving
+Met de GUI kunnen commando's gemakkelijk naar de camera module gestuurd worden doormiddel van knoppen.
+Hiermee kan de camera bijvoorbeeld uit of aan gedaan worden, of de kwaliteit veranderd worden op afstand.
+
+### Vereisten
+- Node.js
+- Node-RED
+
+### Installatie
+1. download de node-red-dashboard module als je die nog niet geïnstaleerd hebt en run Node-RED met de volgende commando's:
+```sh
+npm i node-red-dashboard
+node-red
+```
+2. Open `http://localhost:1880` in een browser om in de node-red editor te komen.
+3. Import de GUI flow in het project (GUI flow is hier te vinden in: `./gui/flows.json`).
+4. Deploy het project en open `http://localhost:1880/ui` in de browser om de GUI te openen.
+
+### Gebruik
+Interacties:
+* `Camera On`: Zet de camera aan.
+* `Camera Off`: Zet de camera uit.
+* `Color`: Schakel tussen kleur en zwart-wit beeld.
+* `Kwaliteit`: verander de kwaliteit van het beeld in bitrate
