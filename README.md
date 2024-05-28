@@ -1,5 +1,22 @@
 # project78
 
+# Table of Contents
+- [Project78](#project78)
+  - [Stream](#stream)
+    - [Beschrijving](#beschrijving)
+    - [Vereisten](#vereisten)
+    - [Dependencies](#dependencies)
+    - [Installatie](#installatie)
+    - [Compilatie](#compilatie)
+    - [Gebruik](#gebruik)
+    - [Functies](#functies)
+    - [Voorbeeld](#voorbeeld)
+    - [FIFO-pijpen](#fifo-pijpen)
+  - [GUI](#gui)
+    - [Beschrijving](#beschrijving-1)
+    - [Vereisten](#vereisten-1)
+    - [Installatie](#installatie-1)
+    - [Gebruik](#gebruik-1)
 
 ## Stream
 ### Beschrijving
@@ -32,9 +49,9 @@ Start de toepassing met
 ./stream <IP_ADRES> <POORT> <BITRATE>
 ```
 waar:
-* <IP_ADRES> het IP-adres van de host is waarnaar gestreamd wordt.
-* <POORT> de poort is waarop gestreamd wordt.
-* <BITRATE> de initiële bitrate in kbps is.
+* `<IP_ADRES>` het IP-adres van de host is waarnaar gestreamd wordt.
+* `<POORT>` de poort is waarop gestreamd wordt.
+* `<BITRATE>` de initiële bitrate in kbps is.
 
 ### Functies
 * Bitrate aanpassen: De bitrate kan worden aangepast door een nieuwe waarde naar /tmp/bitrate_fifo te schrijven.
