@@ -78,4 +78,4 @@ Interacties:
 * `Camera On`: Zet de camera aan.
 * `Camera Off`: Zet de camera uit.
 * `Color`: Schakel tussen kleur en zwart-wit beeld.
-* `Kwaliteit`: verander de kwaliteit van het beeld in bitrate
+* `Quality`: verander de kwaliteit van het beeld in bitrate

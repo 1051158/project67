@@ -13,7 +13,7 @@
         "z": "c10e43bd3f2a0370",
         "name": "Camera On",
         "group": "1f3dc9ee3c8a0dc5",
-        "order": 0,
+        "order": 1,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -41,7 +41,7 @@
         "z": "c10e43bd3f2a0370",
         "name": "Camera Off",
         "group": "1f3dc9ee3c8a0dc5",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -64,42 +64,14 @@
         ]
     },
     {
-        "id": "8992c1fe5ebeacc0",
-        "type": "ui_button",
-        "z": "c10e43bd3f2a0370",
-        "name": "Toggle Color",
-        "group": "1f3dc9ee3c8a0dc5",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Toggle Color",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "toggleColor",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 110,
-        "y": 220,
-        "wires": [
-            [
-                "c866c882009c4798"
-            ]
-        ]
-    },
-    {
         "id": "13765708e7166649",
         "type": "ui_slider",
         "z": "c10e43bd3f2a0370",
-        "name": "Change Bitrate",
-        "label": "Change Bitrate",
+        "name": "Quality",
+        "label": "Quality",
         "tooltip": "",
         "group": "1f3dc9ee3c8a0dc5",
-        "order": 3,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -110,7 +82,7 @@
         "max": "600",
         "step": "10",
         "className": "",
-        "x": 120,
+        "x": 100,
         "y": 300,
         "wires": [
             [
@@ -152,9 +124,63 @@
         "correl": "",
         "expiry": "",
         "broker": "946223a79e5a009f",
-        "x": 530,
+        "x": 570,
         "y": 180,
         "wires": []
+    },
+    {
+        "id": "8c41dcaa0ad00e9e",
+        "type": "ui_switch",
+        "z": "c10e43bd3f2a0370",
+        "name": "Color",
+        "label": "Color",
+        "tooltip": "Color",
+        "group": "1f3dc9ee3c8a0dc5",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "62fe6da9c23042e9"
+            ]
+        ]
+    },
+    {
+        "id": "62fe6da9c23042e9",
+        "type": "function",
+        "z": "c10e43bd3f2a0370",
+        "name": "function 2",
+        "func": "msg.payload = msg.payload ? \"toggleColor:color\" : \"toggleColor:grayscale\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "c866c882009c4798"
+            ]
+        ]
     },
     {
         "id": "1f3dc9ee3c8a0dc5",
