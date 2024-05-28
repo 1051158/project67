@@ -27,7 +27,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 110,
+        "x": 270,
         "y": 60,
         "wires": [
             [
@@ -55,7 +55,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 110,
+        "x": 270,
         "y": 140,
         "wires": [
             [
@@ -82,7 +82,7 @@
         "max": "600",
         "step": "10",
         "className": "",
-        "x": 100,
+        "x": 260,
         "y": 300,
         "wires": [
             [
@@ -102,7 +102,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
+        "x": 480,
         "y": 300,
         "wires": [
             [
@@ -123,8 +123,8 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "946223a79e5a009f",
-        "x": 570,
+        "broker": "132b019796afb134",
+        "x": 730,
         "y": 180,
         "wires": []
     },
@@ -154,7 +154,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 90,
+        "x": 250,
         "y": 220,
         "wires": [
             [
@@ -167,18 +167,76 @@
         "type": "function",
         "z": "c10e43bd3f2a0370",
         "name": "function 2",
-        "func": "msg.payload = msg.payload ? \"toggleColor:color\" : \"toggleColor:grayscale\"\nreturn msg;",
+        "func": "msg.payload = msg.payload ? \"toggleColor:color\" : \"toggleColor:greyscale\"\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
+        "x": 480,
         "y": 220,
         "wires": [
             [
                 "c866c882009c4798"
+            ]
+        ]
+    },
+    {
+        "id": "8d5ab0297e99b3e3",
+        "type": "inject",
+        "z": "c10e43bd3f2a0370",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "8c41dcaa0ad00e9e"
+            ]
+        ]
+    },
+    {
+        "id": "e652d08e6d870bf4",
+        "type": "inject",
+        "z": "c10e43bd3f2a0370",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "500",
+        "payloadType": "num",
+        "x": 90,
+        "y": 300,
+        "wires": [
+            [
+                "13765708e7166649"
             ]
         ]
     },
@@ -194,10 +252,10 @@
         "className": ""
     },
     {
-        "id": "946223a79e5a009f",
+        "id": "132b019796afb134",
         "type": "mqtt-broker",
-        "name": "LocalHost",
-        "broker": "localhost",
+        "name": "test",
+        "broker": "192.168.41.20",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
