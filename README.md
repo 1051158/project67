@@ -43,9 +43,9 @@ Start de toepassing met
 ./stream <IP_ADRES> <POORT> <BITRATE>
 ```
 waar:
-- <IP_ADRES> het IP-adres van de host is waarnaar gestreamd wordt.
-- <POORT> de poort is waarop gestreamd wordt.
-- <BITRATE> de initiële bitrate in kbps is.
+- `<IP_ADRES>` het IP-adres van de host is waarnaar gestreamd wordt.
+- `<POORT>` de poort is waarop gestreamd wordt.
+- `<BITRATE>` de initiële bitrate in kbps is.
 
 ### Functies
 - Bitrate aanpassen: De bitrate kan worden aangepast door een nieuwe waarde naar /tmp/bitrate_fifo te schrijven.
