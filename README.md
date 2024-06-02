@@ -38,3 +38,6 @@ cd receiver
 chmod +x receiver.sh
 ./receiver.sh
 ```
+
+## Systeemdiagram
+![architectuur drawio](https://github.com/1051158/project78/assets/120414356/9ac443b3-69e8-4cac-a8b6-2f0d654a010b)
