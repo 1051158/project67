@@ -1,6 +1,6 @@
 # project78
 
-# Table of Contents
+## Table of Contents
 - [Project78](#project78)
   - [Stream](#stream)
     - [Beschrijving](#beschrijving)
@@ -20,9 +20,9 @@
 
 ## Stream
 ### Beschrijving
-Deze toepassing streamt video van een camera naar een specifieke host en poort via RTP, met de mogelijkheid om de bitrate en kleurmodus aan te passen via FIFO-pijpen.
+Deze toepassing streamt video van een camera naar een specifieke host en poort via RTP, met de mogelijkheid om de bitrate en kleurmodus aan te passen via FIFO-pijpen. Voor gebruik met de MQTT programma hoef je dit programma niet zelf aan te roepen
 
-## Vereisten
+### Vereisten
 - GStreamer 1.0
 - GLib
 - g++ compiler
