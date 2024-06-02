@@ -41,15 +41,3 @@ cd receiver
 chmod +x receiver.sh
 ./receiver.sh
 ```
-
-### Bijdragen
-
-Bijdragen aan dit project zijn welkom. Volg de standaard fork- en pull request-werkstroom.
-
-### Licentie
-
-Dit project is gelicentieerd onder de MIT-licentie. Zie het `LICENSE`-bestand voor meer informatie.
-
----
-
-Dank u voor het gebruiken van Project78! Als u vragen heeft, neem dan gerust contact met ons op.
