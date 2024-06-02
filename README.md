@@ -10,8 +10,8 @@ Volg de onderstaande stappen om het project op uw lokale machine op te zetten:
 
 1. **Repository Klonen**
     ```bash
-    git clone [repository_url]
-    cd project78-main
+    git clone https://github.com/1051158/project78.git
+    cd project78
     ```
 
 2. **Python Vereisten Installeren**
