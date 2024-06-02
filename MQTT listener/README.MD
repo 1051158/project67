@@ -63,3 +63,5 @@ python main.py
 
 Het script zal verbinding maken met de MQTT-broker en berichten op het opgegeven topic beginnen verwerken.
 
+## Blokdiagram
+  
