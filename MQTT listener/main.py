@@ -11,7 +11,7 @@ starting_bitrate = 500
 username = ""
 password = ""
 topic = ""
-path_to_stream_exe = ""
+path_to_stream_exe = "..\stream\stream"
  
 stream_pid = None
 
