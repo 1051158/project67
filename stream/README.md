@@ -50,5 +50,5 @@ mkfifo /tmp/bitrate_fifo
 mkfifo /tmp/color_toggle_fifo
 ```
 
-## Blockdiagram
+## Blokdiagram
 ![blokdiagram_stream](https://github.com/1051158/project78/assets/120414356/b5cb5841-fdc7-4a2d-93e9-079feb256db4)
