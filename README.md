@@ -19,7 +19,7 @@ Volg de onderstaande stappen om het project op uw lokale machine op te zetten:
     ```bash
     pip install -r MQTT\ listener/requirements.txt
     ```
-        Voor de latency analyze:
+   Voor de latency analyze:
     ```bash
     pip install -r latency/requirements.txt
     ```
